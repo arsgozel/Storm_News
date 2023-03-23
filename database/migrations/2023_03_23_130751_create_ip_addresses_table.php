@@ -11,12 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('ip_addresses', function (Blueprint $table) {
             $table->id();
-            $table->string('admin')->default(0);
-            $table->string('username')->unique();
-            $table->string('password');
-            $table->rememberToken();
+            $table->ipAddress('ip_address');
         });
     }
 
@@ -25,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('ip_addresses');
     }
 };

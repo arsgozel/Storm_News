@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('news_images', function (Blueprint $table) {
             $table->id();
-            $table->string('admin')->default(0);
-            $table->string('username')->unique();
-            $table->string('password');
-            $table->rememberToken();
+            $table->unsignedBigInteger('news_id')->index();
+            $table->foreign('news_id')->references('id')->on('news')->cascadeOnDelete();
+            $table->string('image');
         });
     }
 
@@ -25,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('news_images');
     }
 };

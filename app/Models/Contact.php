@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Contact extends Model
 {
     use HasFactory;
+
+    protected $guarded = [
+        'id',
+    ];
+
+    public $timestamps = false;
+
+    protected $casts = [
+        'received_at' => 'datetime',
+    ];
 }

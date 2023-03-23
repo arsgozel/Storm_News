@@ -7,5 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class NewsImage extends Model
 {
-    use HasFactory;
+    protected $guarded = [
+        'id',
+    ];
+
+    public $timestamps = false;
+
+
+    public function news()
+    {
+        return $this->belongsTo(News::class);
+    }
 }

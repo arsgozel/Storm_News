@@ -29,20 +29,6 @@ class Category extends Model
     }
 
 
-    public function parent()
-    {
-        return $this->belongsTo(self::class, 'parent_id');
-    }
-
-
-    public function child()
-    {
-        return $this->hasMany(self::class, 'parent_id')
-            ->orderBy('sort_order')
-            ->orderBy('name_tm');
-    }
-
-
     public function getName()
     {
         if (app()->getLocale() == 'en') {

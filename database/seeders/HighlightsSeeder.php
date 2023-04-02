@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\Category;
+use App\Models\Highlights;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class CategorySeeder extends Seeder
+class HighlightsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,17 +14,14 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         $objs = [
-            ['Travel', null, null],
-            ['Sport', null, null],
-            ['Business', null, null],
-            ['Lifestyle', null, null],
-            ['Health', null, null],
-            ['Climate', null, null],
-            ['Tech', null, null],
+            ['MONEY, INNOVATION & LEADERSHIP', null, null],
+            ['FUTURE OF WORK', null, null],
+            ['EDITOR\'S PICKS', null, null],
+            ['YOU SHOULD KNOW', null, null],
         ];
 
         for ($i = 0; $i < count($objs); $i++) {
-            Category::create([
+            Highlights::create([
                 'name_tm' => $objs[$i][0],
                 'name_en' => $objs[$i][1],
                 'name_ru' => $objs[$i][2],

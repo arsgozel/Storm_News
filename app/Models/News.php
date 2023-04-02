@@ -65,7 +65,7 @@ class News extends Model
 
     public function getImage()
     {
-        return $this->image ? Storage::url('j/' . $this->image) : asset('img/news.jpg');
+        return $this->image ? Storage::url('n/' . $this->image) : asset('img/news.jpg');
     }
 
 }

@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('contacts', function (Blueprint $table) {
+        Schema::create('highlights', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('phone');
-            $table->string('email')->nullable();
-            $table->string('message');
-            $table->dateTime('received_at')->useCurrent();
+            $table->string('name_tm');
+            $table->string('name_ru')->nullable();
+            $table->string('name_en')->nullable();
+            $table->string('slug')->unique();
+            $table->unsignedInteger('sort_order')->default(1);
         });
     }
 
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('contacts');
+        Schema::dropIfExists('highlights');
     }
 };

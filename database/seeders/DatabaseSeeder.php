@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
         $this->call(array(
             CategorySeeder::class,
             HighlightsSeeder::class,
+            UserSeeder::class,
         ));
 
         Contact::factory()->count(30)->create();

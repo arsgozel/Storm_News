@@ -15,11 +15,11 @@ class DashboardController extends Controller
     public function index(){
 
         $modals = [
-            ['name' => 'news', 'total' => News::count()],
-            ['name' => 'categories', 'total' => Category::count()],
-            ['name' => 'highlights', 'total' => Highlights::count()],
-            ['name' => 'contacts', 'total' => Contact::count()],
-            ['name' => 'visitors', 'total' => Visitor::count()],
+            ['name' => 'news', 'icon' => 'newspaper', 'total' => News::count()],
+            ['name' => 'categories', 'icon' => 'bookmark', 'total' => Category::count()],
+            ['name' => 'highlights', 'icon' => 'award', 'total' => Highlights::count()],
+            ['name' => 'contacts', 'icon' => 'person-lines-fill', 'total' => Contact::count()],
+            ['name' => 'visitors', 'icon' => 'people', 'total' => Visitor::count()],
         ];
 
         $visible = News::where('is_visible', 1)

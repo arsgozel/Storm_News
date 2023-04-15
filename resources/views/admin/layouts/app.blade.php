@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap-icons.css') }}">
     <link rel="stylesheet" href="{{ asset('css/splide.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/font.css') }}">
 </head>
-<body>
+<body class="bg-light">
 @include('admin.layouts.header')
 <div class="container-fluid">
     <div class="row">

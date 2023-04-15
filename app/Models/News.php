@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
@@ -66,6 +67,25 @@ class News extends Model
     public function getImage()
     {
         return $this->image ? Storage::url('n/' . $this->image) : asset('img/news.jpg');
+    }
+
+
+    public function status()
+    {
+        if ($this->is_visible == 0) {
+            return trans('app.not-visible');
+        } else {
+            return trans('app.visible');
+        }
+    }
+
+    public function statusColor()
+    {
+        if ($this->is_visible == 0) {
+            return 'danger';
+        } else {
+            return 'success';
+        }
     }
 
 }

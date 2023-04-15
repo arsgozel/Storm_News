@@ -23,10 +23,12 @@ class DashboardController extends Controller
         ];
 
         $visible = News::where('is_visible', 1)
-            ->count();
+            ->take(10)
+            ->get();
 
         $not_visible = News::where('is_visible', 0)
-            ->count();
+            ->take(10)
+            ->get();
 
         return view('admin.dashboard.index')
             ->with([

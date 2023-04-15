@@ -19,4 +19,73 @@
             </div>
         @endforeach
     </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card rounded-4">
+                <a href="{{ route('admin.news.index' )}}" class="d-flex justify-content-between align-items-center text-decoration-none card-header rounded-4 bg-opacity-25 bg-danger">
+                    <div>@lang('app.visible') - @lang('app.news')</div>
+                </a>
+                <div class="card-body small p-1">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-striped table-sm mb-0">
+                            <tbody>
+                            @forelse($visible as $obj)
+                                <tr>
+                                    <td>
+                                        <span><img src="{{ $obj->getImage() }}" alt="{{ $obj->image }}" class="img-fluid rounded-5" style="max-height:2rem;"></span>
+                                        <span class="fw-normal">{{ $obj->getName()}}</span>
+                                    </td>
+                                    <td>{{$obj->category->name_tm}}</td>
+                                    <td>{{$obj->created_at}}</td>
+                                    <td>
+                                        <span class="badge text-bg-{{ $obj->statusColor() }}">{{$obj->status()}}</span>
+                                    </td>
+                                    <td><i class="bi-eye-fill"></i> {{$obj->viewed}}</td>
+                                </tr>
+                            @empty
+                                <tr class="table-warning">
+                                    <td>Not found</td>
+                                </tr>
+                            @endforelse
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card rounded-4">
+                <a href="{{ route('admin.news.index' )}}" class="d-flex justify-content-between align-items-center text-decoration-none card-header rounded-4 bg-opacity-25 bg-danger">
+                    <div>@lang('app.not-visible') - @lang('app.news')</div>
+                </a>
+                <div class="card-body small p-1">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-striped table-sm mb-0">
+                            <tbody>
+                            @forelse($not_visible as $obj)
+                                <tr>
+                                    <td>
+                                        <span><img src="{{ $obj->getImage() }}" alt="{{ $obj->image }}" class="img-fluid rounded-5" style="max-height:2rem;"></span>
+                                        <span class="fw-normal">{{ $obj->getName()}}</span>
+                                    </td>
+                                    <td>{{$obj->category->name_tm}}</td>
+                                    <td>{{$obj->created_at}}</td>
+                                    <td>
+                                        <span class="badge text-bg-{{ $obj->statusColor() }}">{{$obj->status()}}</span>
+                                    </td>
+                                    <td><i class="bi-eye-fill"></i> {{$obj->viewed}}</td>
+                                </tr>
+                            @empty
+                                <tr class="table-warning">
+                                    <td>Not found</td>
+                                </tr>
+                            @endforelse
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection

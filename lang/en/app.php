@@ -60,6 +60,8 @@ return [
     'updatedAt' => 'Updated at',
     'visitor' => 'Visitor',
     'visitors' => 'Visitors',
+    'visible' => 'Visible',
+    'not-visible' => 'Not Visible',
 
     'send' => 'Send',
     'add' => 'Add',

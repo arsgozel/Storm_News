@@ -9,7 +9,7 @@ return [
     'dashboard' => 'Панель',
     'user' => 'Админ',
     'users' => 'Админы',
-    'category' => 'Категория',
+    'categories' => 'Категория',
     'categories' => 'Категории',
     'highlights' => 'Основные моменты',
     'new' => 'Новость',

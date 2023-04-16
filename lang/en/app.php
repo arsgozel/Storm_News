@@ -9,7 +9,7 @@ return [
     'dashboard' => 'Dashboard',
     'user' => 'Manager',
     'users' => 'Users',
-    'category' => 'Category',
+    'categories' => 'Category',
     'categories' => 'Categories',
     'highlights' => 'Highlights',
     'new' => 'New',

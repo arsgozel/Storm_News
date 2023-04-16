@@ -24,10 +24,10 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
         ));
 
-        Contact::factory()->count(30)->create();
-        News::factory()->count(30)->create();
-        UserAgent::factory()->count(50)->create();
-        IpAddress::factory()->count(50)->create();
-        Visitor::factory()->count(50)->create();
+        Contact::factory()->count(203)->create();
+        News::factory()->count(320)->create();
+        UserAgent::factory()->count(200)->create();
+        IpAddress::factory()->count(200)->create();
+        Visitor::factory()->count(200)->create();
     }
 }

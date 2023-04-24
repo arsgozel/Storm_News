@@ -3,7 +3,7 @@
 @section('content')
     <div class="d-flex justify-content-between align-items-center mb-3">
         <div class="h4 mb-0">
-            <a href="{{ route('admin.visitors.index') }}">@lang('app.visitors')</a>
+            <a href="{{ route('admin.visitors.index') }}" class="text-decoration-none">@lang('app.visitors')</a>
         </div>
         <div>
             @include('admin.visitors.filter')

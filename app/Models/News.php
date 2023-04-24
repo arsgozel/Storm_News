@@ -34,6 +34,11 @@ class News extends Model
         return $this->belongsTo(Category::class);
     }
 
+    public function highlights()
+    {
+        return $this->belongsTo(Highlights::class);
+    }
+
 
     public function images()
     {

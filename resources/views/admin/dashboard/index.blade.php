@@ -23,7 +23,7 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="card rounded-3 shadow-sm">
-                <a href="{{ route('admin.news.index' )}}" class="d-flex justify-content-between align-items-center text-decoration-none card-header rounded-3 bg-white">
+                <a href="{{ route('admin.news.index', ['status' => 1])}}" class="d-flex justify-content-between align-items-center text-decoration-none card-header rounded-3 bg-white">
                     <div class="fw-semibold">@lang('app.visible') - @lang('app.news')</div>
                 </a>
                 <div class="card-body small p-1">
@@ -56,7 +56,7 @@
         </div>
         <div class="col-lg-6">
             <div class="card rounded-3 shadow-sm">
-                <a href="{{ route('admin.news.index' )}}" class="d-flex justify-content-between align-items-center text-decoration-none card-header rounded-3 bg-white">
+                <a href="{{ route('admin.news.index', ['status' => 0] )}}" class="d-flex justify-content-between align-items-center text-decoration-none card-header rounded-3 bg-white">
                     <div class="fw-semibold">@lang('app.not-visible') - @lang('app.news')</div>
                 </a>
                 <div class="card-body small p-1">

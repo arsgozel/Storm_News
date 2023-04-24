@@ -30,12 +30,12 @@
                 <tr>
                     <td>{{ $obj->id }}</td>
                     <td>
-                        <a href="tel:+993{{ $obj->phone }}" class="text-decoration-none">
+                        <a href="tel:+993{{ $obj->phone }}">
                             +993 {{ $obj->phone }}
                         </a>
                     </td>
                     <td>
-                        <a href="mailto:{{ $obj->email }}" class="text-decoration-none">
+                        <a href="mailto:{{ $obj->email }}">
                             {{ $obj->email }}
                         </a>
                     </td>
